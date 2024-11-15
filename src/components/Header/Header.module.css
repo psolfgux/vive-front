@@ -1,0 +1,229 @@
+.container{
+    max-width: 480px;
+    position: relative;
+}
+
+.logoHeader{
+    background: #ECECEC;
+    display: table;
+    margin: 0 auto;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 45px 40px 20px 40px;
+}
+  
+.logo{
+    display: table;
+    margin: 0 auto;
+    height: auto;
+    width: 100px;
+}
+
+.profile{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: #70C4BD;
+    overflow: hidden;
+}
+
+.profile img{
+    display: table;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;   
+    width: 85%; 
+}
+
+
+.modalContent{
+    background: #FFF;
+    padding: 20px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.modalContainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+}
+
+.magenta{
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    margin-top: -30%;
+}
+
+.modalTitle{
+    color: #333;
+    font-family: "Lilita One";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.description{
+    color: #333;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 auto;
+    display: table;
+    max-width: 250px;
+}
+
+.btn{
+    display: flex;
+    width: 250px;
+    padding: 16px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 100px;
+    background: #8F6CF0;
+    text-decoration: none;
+    border: none;
+    margin: 20px auto;
+
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    color: #ECECEC;
+}
+
+.have{
+    text-align: center;
+    font-family: Inter;
+    font-size: 13px;
+    color: #333;
+    margin: 15px auto;
+    display: table;
+    font-weight: 600;
+}
+
+.btnHave{
+    background: transparent;
+    border: none;
+    color: #8F6CF0;
+    font-weight: bold;
+}
+
+.label{
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    color: #333;
+    display: block;
+    margin: 0 auto 3px 5px;
+}
+
+.input{
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    color: #333;
+    padding: 10px 5px;
+    margin-bottom: 15px;
+}
+
+.btnCreate{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 100px;
+    background: #8F6CF0;
+    text-decoration: none;
+    border: none;
+    margin: 20px auto;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    color: #ECECEC;
+}
+
+
+.flexi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message{
+    color: #CA1C31;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.photo{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    display: table;
+    margin: 10px auto;
+    border-radius: 50%;
+}
+
+.email, .name{
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+.btnClose{
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.btnImage{
+    width: 18px;
+    height: 18px;
+}
+
+.welcome{
+    font-family: Inter;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}

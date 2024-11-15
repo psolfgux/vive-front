@@ -1,0 +1,48 @@
+.container{
+    background: #5BC5C3;
+    padding: 25px 25px 49px 25px;
+    border-radius: 20px;
+    margin-top: -30px;
+}
+
+.contentHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tematicaTitle{
+    color: #ECECEC;
+    font-family: "Lilita One";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: table;
+    width: 80%;
+}
+
+.tematicaLink{
+    
+}
+
+.tematicaDescription{
+    color: #ECECEC;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding: 20px 0;
+}
+
+.toggleContent {
+
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .show {
+    max-height: 500px !important; 
+  }
+  

@@ -1,0 +1,94 @@
+.container {
+    background-image: url('../assets/bg-uno.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+
+.logoHeader{
+    background: #ECECEC;
+    display: table;
+    margin: 0 auto;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 45px 40px 20px 40px;
+}
+  
+.logo{
+    display: table;
+    margin: 0 auto;
+    height: auto;
+    width: 100px;
+}
+
+.contentCenter{
+    padding: 5px 20px;
+}
+
+.amigos{
+    display: table;
+    margin: 35px auto;
+    max-width: 300px;
+    width: 90%;
+}
+
+.welcomeTitle{
+    color: #ECECEC;
+    text-align: center;
+    font-family: "Lilita One";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: table;
+    margin: 0 auto;
+    max-width: 250px;
+}
+
+.description{
+    color: #ECECEC;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin: 16px auto;
+    display: table;
+    max-width: 220px;
+}
+
+.contentBottom{
+    background: #ECECEC;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+  
+.btnStart{
+    display: flex;
+    width: 268px;
+    padding: 16px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 100px;
+    background: #8F6CF0;
+    text-decoration: none;
+}
+
+.btnStart span{
+    color: #ECECEC;
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}

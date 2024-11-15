@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #F4F4F4;
+}
+
+
+
+@media (max-width: 1000px){
+    #root{
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+}
+
+@media (min-width: 1000px){
+    #root{
+        display: table;
+        max-width: 480px;
+        margin: 0 auto;
+        /*width: 100%;*/
+    }
+}

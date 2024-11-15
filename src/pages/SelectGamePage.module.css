@@ -1,0 +1,47 @@
+.container {
+    background-image: url('../assets/bg-uno.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+
+  }
+
+
+  .contentHeader{
+    padding: 60px 40px;
+  }
+
+  .selectgameTitle{
+    color: #ECECEC;
+    text-align: center;
+    font-family: "Lilita One";
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .contentCenter{
+    background: #ECECEC;
+    padding: 40px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-top: 12vh;
+  }
+
+  .btnQuiero{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.36px;
+    text-align: center;
+    color: #003F51;
+    display: table;
+    margin: 25px auto 25px auto;
+    padding-bottom: 3px;
+    border-bottom: 2px solid #003F51;
+    text-decoration: none;
+  }
