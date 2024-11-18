@@ -5,13 +5,13 @@
     line-height: 32px;
     text-align: center;
     color: #ECECEC;
-    margin-top: 35px;
+    margin-top: 5px;
 }
 
 .container{
     padding: 20px 0;
     height: 100vh;
-    max-width: 480px;
+    max-width: 380px;
 }
 
 .btnQuiero{

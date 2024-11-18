@@ -30,9 +30,9 @@
 
 .amigos{
     display: table;
-    margin: 35px auto;
-    max-width: 300px;
-    width: 90%;
+    margin: 10px auto;
+    max-width: 260px;
+    width: 80%;
 }
 
 .welcomeTitle{
@@ -56,14 +56,14 @@
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-    margin: 16px auto;
+    margin: 10px auto;
     display: table;
     max-width: 220px;
 }
 
 .contentBottom{
     background: #ECECEC;
-    padding: 50px 20px;
+    padding: 35px 20px;
     display: flex;
     justify-content: center;
     align-items: center;

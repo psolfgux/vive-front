@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import styles from './WelcomePage.module.css';
 
-import logo from './../assets/logo.png';
-import amigos from './../assets/amigos.png';
+import logo from './../assets/logo1.png';
+import amigos from './../assets/amigos1.png';
 import right from './../assets/right.png';
 
 import Header from './../components/Header/Header';

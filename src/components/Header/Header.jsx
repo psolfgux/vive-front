@@ -3,7 +3,7 @@ import { gapi } from 'gapi-script';
 import GoogleLogin from 'react-google-login';
 import styles from './Header.module.css';
 import imagen from './../../assets/user.png';
-import magenta from './../../assets/magenta.png';
+import magenta from './../../assets/magenta1.png';
 import RegisterForm from '../RegisterForm/RegisterForm';
 import LoginForm from '../LoginForm/LoginForm';
 import { AuthContext } from './../../context/AuthContext';
@@ -126,9 +126,12 @@ const Header = () => {
 
     return (
         <div className={styles.container}>
-            <div className={styles.profile} onClick={toggleModal}>
-                <img src={userImage || imagen} alt="Profile" />
-            </div>
+            {isLoggedIn && (
+                <div className={styles.profile} onClick={toggleModal}>
+                    <img src={userImage || imagen} alt="Profile" />
+                </div>
+            )}
+            
 
             {isModalOpen && (
                 goodBye ? (
