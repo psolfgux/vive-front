@@ -15,7 +15,6 @@
     //background: rgba(255, 255, 255, 0.3);
     padding: 10px 0;
     max-width: 280px;
-    background: url('../../assets/bg-card.png');
     background-size: cover;
 }
 
@@ -95,7 +94,7 @@
 }
 
 .magenta{
-    width: 120px;
+    width: 100px;
     margin-left: auto;
     margin-right: auto;
     display: table;
@@ -105,7 +104,7 @@
 .text{
     color: #333;
     font-family: Inter;
-    font-size: 20px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: 1.2;
@@ -127,4 +126,22 @@
     padding-bottom: 3px;
     border-bottom: 2px solid #003F52;
     text-decoration: none;
+  }
+
+  .select{
+    padding: 10px;
+    border-color: #ccc;
+    border-radius: 7px;
+    display: table;
+    margin: 0 auto;
+  }
+
+  .btn1{
+    color: #6641B3;
+    border: none;
+    display: table;
+    margin: 25px auto 0 auto;
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 2px solid #6641B3;
   }

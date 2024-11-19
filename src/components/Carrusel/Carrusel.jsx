@@ -6,7 +6,7 @@ import { AuthContext } from './../../context/AuthContext';
 import magenta from './../../assets/magenta.png';
 import { Link } from 'react-router-dom';
 
-const Carrusel = ({ game, image, color, registerGameNow, idGame }) => {
+const Carrusel = ({ game, image, color, registerGameNow, idGame, fondo, userid, tematicaid }) => {
   const sliderRef = useRef(null);
   const [selectedCard, setSelectedCard] = useState(0);
   const [randomNumbers, setRandomNumbers] = useState([]);
@@ -15,6 +15,9 @@ const Carrusel = ({ game, image, color, registerGameNow, idGame }) => {
   const { userId, setIsModalOpen, isLoggedIn, token } = useContext(AuthContext);
 
   const [count, setCount] = useState(0);
+
+  const [thankYouMessage, setThankYouMessage] = useState(false);
+  const [score, setScore] = useState(0);
 
   const registerCardGame = async (id_card) => {
 
@@ -50,7 +53,7 @@ const Carrusel = ({ game, image, color, registerGameNow, idGame }) => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
@@ -132,6 +135,37 @@ const Carrusel = ({ game, image, color, registerGameNow, idGame }) => {
     }
   };
 
+  const fondoUrl = fondo ? `${import.meta.env.VITE_APP_MAIN}storage/${fondo}` : null;
+  
+  const handleSubmitRating = async (e) => {
+    e.preventDefault();
+
+    // Si no hay puntuación seleccionada, no hacemos nada
+    if (score === null) return;
+
+    try {
+      const response = await fetch(`${import.meta.env.VITE_APP_BACKEND_URL}calificar`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          valor: score,
+          tematica_id: tematicaid,
+          player_id: userid 
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Error al registrar la calificación');
+      }
+      setThankYouMessage(true);
+    } catch (error) {
+      console.error('Error al enviar la calificación', error);
+    }
+  };
+
   return (
     <div className={styles.container}>
       <Slider ref={sliderRef} {...settings}>
@@ -144,6 +178,9 @@ const Carrusel = ({ game, image, color, registerGameNow, idGame }) => {
                 borderRadius: 20,
                 textAlign: 'center',
                 transition: 'all 0.3s ease',
+                backgroundImage: `url(${fondoUrl})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
               }}
             >
               <img src={`${import.meta.env.VITE_APP_MAIN}storage/${image}`} alt="Logo Card" className={styles.image} />
@@ -156,7 +193,7 @@ const Carrusel = ({ game, image, color, registerGameNow, idGame }) => {
         ))}
       </Slider>
       <button onClick={goToRandomCard} className={styles.btn} style={{ color }}>
-        Barajar de nuevo
+        Siguiente carta
       </button>
 
       <Link className={styles.btnQuiero} to="/select-game">
@@ -168,13 +205,44 @@ const Carrusel = ({ game, image, color, registerGameNow, idGame }) => {
           <div className={styles.modal}>
             <div className={styles.modalContent}>
               <img src={magenta} alt="magenta" className={styles.magenta} />
-              <p className={styles.text}>¡Final del juego!</p>
-              <Link 
-                className={styles.btnQuiero} 
-                to="/select-game"
-              >
-                <span>Seleccionar otra tematica</span>
-              </Link>
+              
+              {thankYouMessage ? (
+                <>
+                <p className={styles.text}>
+                  Gracias por calificar la App Vive Ubuntu! Ahora puedes seguir jugando con nuevas temáticas.
+                </p>
+                <Link className={styles.btn1} to="/select-game">
+                  <span>Cambiar tematica</span>
+                </Link>
+                </>
+              ) : (
+                <>
+                  <p className={styles.text}>En una escala de 0 a 10, ¿qué tan probable es que recomiendes la App Ububtu a un amig@, colega o familiar?</p>
+                  <form onSubmit={handleSubmitRating}>
+                    <div className={styles.formGroup}>
+                      <select
+                        value={score}
+                        onChange={(e) => setScore(e.target.value)}
+                        className={styles.select}
+                        required
+                      >
+                        <option value="" disabled>Selecciona tu puntuación</option>
+                        {[...Array(11).keys()].map((i) => (
+                          <option key={i} value={i}>{i}</option>
+                        ))}
+                      </select>
+                    </div>
+                    <button type="submit" className={styles.btn1}>Enviar</button>
+                  </form>
+                </>
+                
+              )}
+
+
+
+
+
+
             </div>
           </div>
         </div>

@@ -118,7 +118,10 @@ const registerGame = async (id_player, id_tematica) => {
             image={tematica.image} 
             color={tematica.color} 
             idGame={idGame}
-            registerGameNow={registerGameNow} 
+            fondo={tematica.fondo}
+            registerGameNow={registerGameNow}
+            userid={userId}
+            tematicaid={tematica.id}
           />
         )}
       </div>
