@@ -4,7 +4,7 @@
     background-position: center; 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     height: 100vh;
   }
 
@@ -30,8 +30,8 @@
 
 .amigos{
     display: table;
-    margin: 10px auto;
-    max-width: 230px;
+    margin: 25px auto;
+    max-width: 260px;
     width: 80%;
 }
 
@@ -63,12 +63,15 @@
 
 .contentBottom{
     background: #ECECEC;
-    padding: 35px 20px 140px 20px;
+    padding: 35px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
   
 .btnStart{
