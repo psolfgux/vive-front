@@ -63,13 +63,12 @@
 
 .contentBottom{
     background: #ECECEC;
-    padding: 35px 20px;
+    padding: 35px 20px 70px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    margin-top: 70px;
 }
   
 .btnStart{
